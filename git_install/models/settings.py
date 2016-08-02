@@ -33,10 +33,10 @@ class OcaGitInstallSettings(models.TransientModel):
 
     default_oca_addon_base_url = fields.Char(default_model='git.installer',default='https://github.com/OCA')
 
-    if os.environ['XDG_DATA_HOME']:
+    if os.environ.get('XDG_DATA_HOME',False):
         default_oca_addon_path = fields.Char(default_model='git.installer',default=os.path.join(os.environ['XDG_DATA_HOME'],'Odoo','addons','8.0'))
         default_oca_download_path = fields.Char(default_model='git.installer',default=os.path.join(os.environ['XDG_DATA_HOME'],'src'))
     else:
-        default_oca_addon_path = fields.Char(default_model='git.installer',default=os.path.join(os.environ['HOME'],'addons','8.0'))
-        default_oca_download_path = fields.Char(default_model='git.installer',default=os.path.join(os.environ['HOME'],'src'))
+        default_oca_addon_path = fields.Char(default_model='git.installer',default=os.path.join(os.environ.get('HOME','/var/lib/odoo'),'addons','8.0'))
+        default_oca_download_path = fields.Char(default_model='git.installer',default=os.path.join(os.environ.get('HOME','/var/lib/odoo'),'src'))
     default_addon_symlink = fields.Boolean(default_model='git.installer',default=True)
