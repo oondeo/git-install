@@ -6,7 +6,7 @@
 
     <record model="ir.ui.view" id="git_install.view_oca_git_installer_form">
         <field name="name">OCA addons installer</field>
-        <field name="model">git_install.git.installer</field>
+        <field name="model">git.installer</field>
 
 
         <field name="arch" type="xml">
