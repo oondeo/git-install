@@ -18,10 +18,10 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
- 
+
 # noinspection PyStatementEffect
 {
-    "name" : "OCA downloader",
+    "name" : "Remote module downloader",
     "version": "8.0.0.3",
     "author" : "Juan Ramon Alfaro Martínez",
     "website" : "www.oondeo.es",
@@ -42,5 +42,5 @@ Downloads modules from OCA git
     "demo" : [],
     "installable": True,
     "auto_install": True,
-    "application": False,
+    "application": True,
 }
