@@ -29,7 +29,7 @@ logger = logging.getLogger(__name__)
 
 
 class GitInstaller(models.TransientModel):
-    _name = 'git.installer'
+    _name = 'git_install.git.installer'
     _description = 'OCA addons installer'
 
     oca_download_path = fields.Char(required=True,string='Oca download path')
